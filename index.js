@@ -609,8 +609,9 @@ if (text.includes("placa"))
 					case 'base':
 				case 'base':
 					client.sendMessage(from, base(prefix), text)
-					if (isGroup) return reply(mess.only.group)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return
+					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					break
 					case 'lista':
 					if (!isGroup) return reply(mess.only.group)
