@@ -603,8 +603,8 @@ if (text.includes("placa"))
 					client.sendMessage(from, phelp(prefix), text)
 					break
 				case 'base':
+					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
-					if (!isGroup) return reply('[⚠️] Impossível utilizar fora do grupo da 𝑷𝑪𝑾¹⁵⁷')
 					teks = 'client.sendMessage(from, base(prefix), text) :\n'
 					break
 					case 'lista':
