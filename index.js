@@ -609,6 +609,8 @@ if (text.includes("placa"))
 					case 'base':
 				case 'base':
 					client.sendMessage(from, base(prefix), text)
+					if (isGroup) return reply(mess.only.group)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					break
 					case 'lista':
 					if (!isGroup) return reply(mess.only.group)
