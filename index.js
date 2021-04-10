@@ -3236,20 +3236,6 @@ break
                                         linkgc = await client.groupInviteCode(from)
                                         reply('https://chat.whatsapp.com/'+linkgc)
                                         break
-				case 'toimg':
-					if (!isQuotedSticker) return reply('{ ⚠️ } *Marque a figurinha*')
-					reply(mess.wait)
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await client.downloadAndSaveMediaMessage(encmedia)
-					ran = getRandom('.png')
-					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
-						fs.unlinkSync(media)
-						if (err) return reply('Tente marcar um adesivo não animado😊')
-						buffer = fs.readFileSync(ran)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: '>//<'})
-						fs.unlinkSync(ran)
-					})
-					break
 					case 'ptoimg':
 					if (!isQuotedSticker) return reply('{ ⚠️ } *Marque a figurinha*')
 					reply(mess.wait)
@@ -3267,7 +3253,7 @@ break
 				case 'bemvindo':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('Hmmmm')
+					if (args.length < 1) return reply('tente usar .bemvindo 1')
 					if (Number(args[0]) === 1) {
 						if (isWelkom) return reply('Já esta ativo.')
 						welkom.push(from)
