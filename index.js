@@ -606,9 +606,9 @@ if (text.includes("placa"))
 				case 'pmenu':
 					client.sendMessage(from, phelp(prefix), text)
 					break
-					case 'base':
 				case 'base':
-					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷')
+					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
+					if (isGroup) return reply('[⚠️] Impossível utilizar fora do grupo da 𝑷𝑪𝑾¹⁵⁷')
 					teks = 'client.sendMessage(from, base(prefix), text) :\n'
 					break
 					case 'lista':
@@ -3137,18 +3137,6 @@ break
 						fs.unlinkSync(rano)
 					})
 					break
-				case 'marcar':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					members_id = []
-					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += '\n\n'
-					for (let mem of groupMembers) {
-						teks += `*#* @${mem.jid.split('@')[0]}\n`
-						members_id.push(mem.jid)
-					}
-					mentions(teks, members_id, true)
-					break
 					case 'pcwall':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -3161,17 +3149,9 @@ break
 					}
 					mentions(teks, members_id, true)
 					break
-                case 'marcar2':
-					members_id = []
-					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += '\n\n'
-					for (let mem of groupMembers) {
-						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
-						members_id.push(mem.jid)
-					}
-					reply(teks)
-					break
 					case 'pcwall2':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -3180,18 +3160,10 @@ break
 						members_id.push(mem.jid)
 					}
 					reply(teks)
-					break
-                 case 'marcar3':
-					members_id = []
-					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += '\n\n'
-					for (let mem of groupMembers) {
-						teks += `╠➥ https://wa.me/${mem.jid.split('@')[0]}\n`
-						members_id.push(mem.jid)
-					}
-					client.sendMessage(from, teks, text, {detectLinks: false, quoted: mek})
 					break
 					case 'pcwall3':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
