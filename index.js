@@ -9,10 +9,8 @@ const { color, bgcolor } = require('./lib/color')
 const { phelp } = require('./src/phelp')
 const { base } = require('./src/base')
 const {help1} = require('./src/help1')
-const { modapk } = require('./src/modapk')
 const { pack } = require('./src/pack')
 const { outros } = require('./src/outros')
-const { vipmenu } = require('./src/vipmenu')
 const { destrava } = require('./src/destrava')
 const { menu2 } = require('./src/menu2')
 const { destrava2 } = require('./src/destrava')
@@ -287,13 +285,11 @@ async function starts() {
 				Iv: '𝗠𝗮𝗮𝗳 𝗹𝗶𝗻𝗸 𝘁𝗶𝗱𝗮𝗸 𝘃𝗮𝗹𝗶𝗱☹️'
 				},
 				only: {
-					group: '[⚠️] Este comando só pode ser usado em grupos! ❌',
-					premium: '[⚠️] ESTE PEDIDO É SO PARA *USUÁRIOS PREMIUMS*',
-					mod: '[⚠️] ESTE PEDIDO É ESPECÍFICO PARA USUÁRIO MOD PZO BOT*',
+					group: '[⚠️] Impossível utilizar fora do grupo da 𝑷𝑪𝑾¹⁵⁷',
 					benned: 'Você para a banda, por favor, contate o proprietário para abrir sua banda',
 					
 					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmã. Você não está registrado como amigo de PZO. Registre-se para fazer amizade com o bot Pzo por meio, \n\nCommand : ${prefix}daftar nama|idade\nExemplo : ${prefix}daftar Pzo|17\n\n──「 PZO BOT 」──`,
-					admin: '[⚠️] Este comando só pode ser usado por administradores de grupo! ❌',
+					admin: 'Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK',
 					Badmin: ' [⚠️] Este comando só pode ser usado quando o bot se torna administrador! ❌',
 				}
 			}
@@ -608,7 +604,7 @@ if (text.includes("placa"))
 					break
 				case 'base':
 					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
-					if (isGroup) return reply('[⚠️] Impossível utilizar fora do grupo da 𝑷𝑪𝑾¹⁵⁷')
+					if (!isGroup) return reply('[⚠️] Impossível utilizar fora do grupo da 𝑷𝑪𝑾¹⁵⁷')
 					teks = 'client.sendMessage(from, base(prefix), text) :\n'
 					break
 					case 'lista':
@@ -1178,10 +1174,6 @@ if (text.includes("placa"))
 					anu = await fetchJson(`http://melodicxt.herokuapp.com/api/txtcustom?theme=blue_metal&text=${tels}&apiKey=administrator`, {method: 'get'})
 					buff = await getBuffer(anu.result)
 					client.sendMessage(from, buff, image, {quoted: mek})
-					break
-					case 'vipmenu':
-					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite *#daftarvip* para comprar acesso Premium!' ,text, { quoted: mek })
-					client.sendMessage(from, vipmenu(prefix) , text, { quoted: mek })
 					break
 					case 'outros':
 					client.sendMessage(from, outros(prefix) , text, { quoted: mek })
@@ -2891,36 +2883,9 @@ break
 					client.sendMessage(from, mentioned)
 				    }
 					break
-					case 'daftarvip': 
-					client.sendMessage(from, daftarvip(prefix) , text, { quoted: mek })
-					break
 					case 'nekopoi':   
 					
 					client.sendMessage(from, nekopoi(prefix) , text, { quoted: mek })
-					break
-					case 'cekvip': 
-					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite *.Daftarvip* para adquirir o acesso Premium!' ,text, { quoted: mek })
-					me = client.user
-					uptime = process.uptime()
-					client.sendMessage(from,  `*──────────────────*\n*Nome do bot:* PZO BOT\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Status:* *ATIVO*\n*──────────────────*\n*Status Bot:* *${kyun(uptime)}*\n\n*VOCE É UM MEMBRO PREMIUM* 🐊🚩\n*──────────────────*` , text, { quoted: mek, })
-					break
-					case 'dellvip':
-					if (!isOwner) return reply(mess.only.ownerB)
-					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite * # Daftarvip * para adquirir o acesso Premium!' ,text, { quoted: mek })
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-					if (mentioned.length > 1) {
-						teks = '╭────「 *PREMIUM👑* 」──*\n│+ *Número* : \n│+ *Status*: *DESATIVO*\n│ Te vejo para o próximo pedido🙂\n*╰──────「 *posição* 」────'
-						for (let _ of mentioned) {
-							teks += `@${_.split('@')[0]}\n`
-						}
-						mentions(teks, mentioned, true)
-						client.sendMessage(from, mentioned)
-					} else {
-						mentions(`╭────「 *PREMIUM👑* 」──*\n│+ *Número* : @${mentioned[0].split('@')[0]}\n│+ *Status*: *DEATIVO*\n│ Te vejo para o próximo pedido🙂\n*╰──────「 *posição* 」────`, mentioned, true)
-					client.sendMessage(from, mentioned)
-				    }
 					break
 					case 'ichiadmin':
 					tod = await getBuffer(`https://i.ibb.co/XDwBVDJ/1f2652c622fa.jpg`)
