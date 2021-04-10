@@ -6,13 +6,46 @@ const {
     GroupSettingChange
 } = require('@adiwajshing/baileys')
 const { color, bgcolor } = require('./lib/color')
+const { help } = require('./src/help')
 const { phelp } = require('./src/phelp')
+const {help1} = require('./src/help1')
+const { modapk } = require('./src/modapk')
+const { pack } = require('./src/pack')
+const { outros } = require('./src/outros')
+const { vipmenu } = require('./src/vipmenu')
+const { destrava } = require('./src/destrava')
+const { menu2 } = require('./src/menu2')
+const { destrava2 } = require('./src/destrava')
+const { gbin } = require('./src/gbin')
+const { gpessoa } = require('./src/gpessoa')
+const { chentai } = require('./src/chentai')
+const { gcpf } = require('./src/gcpf')
+const { addsay } = require('./src/addsay')
+const { listsay } = require('./src/listsay')
+const { addfoto } = require('./src/addfoto')
+const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
+const { fetchJson } = require('./lib/fetcher')
+const { recognize } = require('./lib/ocr')
+const fs = require('fs')
+const anime = JSON.parse(fs.readFileSync('./database/json/anime.json'))
 const antiracismo = JSON.parse(fs.readFileSync('./database/json/antiracismo.json'))
+const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
+const moment = require('moment-timezone')
+const { exec } = require('child_process')
 const kagApi = require('@kagchi/kag-api')
+const fetch = require('node-fetch')
+const tiktod = require('tiktok-scraper')
+const { cekvip } = require('./src/cekvip')
 const { TobzApi } = JSON.parse(fs.readFileSync('./database/json/apikey.json'))
 const { VthearApi } = JSON.parse(fs.readFileSync('./database/json/apikey.json'))
+const { daftarvip } = require('./src/daftarvip')
+const { iklan } = require('./src/iklan')
+const { daftatvip } = require('./src/daftarvip')
 const ffmpeg = require('fluent-ffmpeg')
 const { removeBackgroundFromImageFile } = require('remove.bg')
+const imgbb = require('imgbb-uploader')
+const lolis = require('lolis.life')
+const loli = new lolis()
 const welkom = JSON.parse(fs.readFileSync('./src/welkom.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
 /*const { xp } = require('./database/menu/xp')
@@ -267,11 +300,11 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["5527997179500@s.whatsapp.net,351926456359@s.whatsapp.net"] // replace this with your number
-			const mod = [ownerNumber,"5527997179500@s.whatsapp.net,351926456359@s.whatsapp.net"]//ubah nomor lo
-			const adminbotnumber = ["5527997179500@s.whatsapp.net,351926456359@s.whatsapp.net"]//ubah nomor lo
-			const frendsowner = ["5527997179500@s.whatsapp.net,351926456359@s.whatsapp.net"]//ubah nomor lo
-			const premium = ["5527997179500@s.whatsapp.net,351926456359@s.whatsapp.net"] 
+			const ownerNumber = ["5527997179500@s.whatsapp.net"] // replace this with your number
+			const mod = [ownerNumber,"5527997179500@s.whatsapp.net"]//ubah nomor lo
+			const adminbotnumber = ["5527997179500@s.whatsapp.net"]//ubah nomor lo
+			const frendsowner = ["5527997179500@s.whatsapp.net"]//ubah nomor lo
+			const premium = ["5527997179500@s.whatsapp.net"] 
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -735,9 +768,17 @@ if (text.includes("placa"))
 			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'do leke', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'do leke', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			switch(command) {
+				case 'help':
+				case 'menu':
+					client.sendMessage(from, help(prefix), text)
+					break
 				case 'phelp':
 				case 'pmenu':
 					client.sendMessage(from, phelp(prefix), text)
+					break
+				case 'help1':
+				case 'menu1':
+					client.sendMessage(from, help1(prefix), text)
 					break
 					case 'lista':
 					if (!isGroup) return reply(mess.only.group)
