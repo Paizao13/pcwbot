@@ -295,10 +295,10 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["5527997179500@s.whatsapp.net,351926456359@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["5527997179500@s.whatsapp.net"] // replace this with your number
 			const mod = [ownerNumber,"5527997179500@s.whatsapp.net"]//ubah nomor lo
-			const adminbotnumber = ["5527997179500@s.whatsapp.net,351926456359@s.whatsapp.net"]//ubah nomor lo
-			const frendsowner = ["5527997179500@s.whatsapp.net,351926456359@s.whatsapp.net"]//ubah nomor lo
+			const adminbotnumber = ["5527997179500@s.whatsapp.net"]//ubah nomor lo
+			const frendsowner = ["5527997179500@s.whatsapp.net"]//ubah nomor lo
 			const premium = ["5527997179500@s.whatsapp.net"] 
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
@@ -3130,7 +3130,7 @@ break
 					break
 				case 'bc':
 					if (!isOwner) return reply('Quem é Você? Você não é o paizão')
-					if (args.length < 1) return reply('.......')
+					if (args.length < 1) return reply('Qual foi mano, esqueceu do texto')
 					anu = await client.chats.all()
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
