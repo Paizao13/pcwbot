@@ -87,7 +87,7 @@ const phelp = (prefix) => {
 ╠ Paizao Da Private:
 ║https://youtube.com/channel/UCJHID_3QlOEVSrgW4F0s73Q 
 ║
-╚═〘 PZO BOT 〙`
+╚═〘 PCW BOT 〙`
 }
 
 exports.phelp = phelp
