@@ -605,7 +605,7 @@ if (text.includes("placa"))
 				case 'base':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
-					teks = client.sendMessage(from, base(prefix), text) :\n
+					client.sendMessage(from, base(prefix), text) 
 					break
 					case 'lista':
 					if (!isGroup) return reply(mess.only.group)
