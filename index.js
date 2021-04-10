@@ -2590,9 +2590,9 @@ break
 					})
 					await limitAdd(sender)
 					break
-				case 'figu':
-				case 'fig':
-				case 'f':
+				case 'pfigu':
+				case 'pfig':
+				case 'pf':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await client.downloadAndSaveMediaMessage(encmedia)
@@ -2682,7 +2682,7 @@ break
 							.toFormat('webp')
 							.save(ran)*/
 					} else {
-						reply(`Envie fotos com legendas *.f* ou marque uma imagem que já foi enviada`)
+						reply(`Envie fotos com legendas *.pf* ou marque uma imagem que já foi enviada`)
 					}
 					break
 					case 'pfig':
