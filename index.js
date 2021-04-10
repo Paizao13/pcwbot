@@ -608,18 +608,15 @@ if (text.includes("placa"))
 					break
 					case 'base':
 				case 'base':
-					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷')
+					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
 					teks = 'client.sendMessage(from, base(prefix), text) :\n'
-					teks = 'base succeful\n'
-						for (let _ of mentioned) {
+					for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(from, mentioned, true)
 						client.groupRemove(from, mentioned)
 					} else {
-						mentions(`Ok, chefe. esse cara aqui: @${mentioned[0].split('@')[0]} agora é admin do grupo!`, mentioned, true)
-						client.groupMakeAdmin(from, mentioned)
-					}
+						mentions
 					break
 					case 'lista':
 					if (!isGroup) return reply(mess.only.group)
