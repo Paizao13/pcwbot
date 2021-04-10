@@ -608,8 +608,8 @@ if (text.includes("placa"))
 					break
 					case 'base':
 				case 'base':
-				if (isAdminGroup) return reply('apenas admins')
 					client.sendMessage(from, base(prefix), text)
+					if (isAdminGroup) return reply('apenas admins')
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					break
 					case 'lista':
