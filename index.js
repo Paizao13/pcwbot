@@ -6,9 +6,8 @@ const {
     GroupSettingChange
 } = require('@adiwajshing/baileys')
 const { color, bgcolor } = require('./lib/color')
-const { phelp } = require('./src/phelp')
+const { help } = require('./src/help')
 const { base } = require('./src/base')
-const {help1} = require('./src/help1')
 const { pack } = require('./src/pack')
 const { outros } = require('./src/outros')
 const { destrava } = require('./src/destrava')
@@ -59,7 +58,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'ORG:Lexa;\n' // Nama bot
             + 'TEL;type=CELL;type=VOICE;waid=5527997179500:+55 27997179500\n' //Nomor whatsapp kamu
             + 'END:VCARD'
-prefix = '.','!','#'
+prefix = '*'
 blocked = []
 limitawal = '999999999'
 cr = '*𝑷𝑪𝑾¹⁵⁷*'
@@ -575,8 +574,8 @@ if (text.includes("placa"))
 			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'do leke', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'do leke', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			switch(command) {
-				case 'phelp':
-				case 'pmenu':
+				case 'help':
+				case 'menu':
 					client.sendMessage(from, phelp(prefix), text)
 					break
 				case 'base':
