@@ -576,7 +576,7 @@ if (text.includes("placa"))
 			switch(command) {
 				case 'help':
 				case 'menu':
-					client.sendMessage(from, phelp(prefix), text)
+					client.sendMessage(from, help(prefix), text)
 					break
 				case 'base':
 					if (!isGroup) return reply(mess.only.group)
@@ -766,7 +766,7 @@ break
 							.toFormat('webp')
 							.save(ran)*/
 					} else {
-						reply(`Envie mídia com a legenda *.pfig* ou marque uma mídia que já foi enviada`)
+						reply(`Envie mídia com a legenda **pfig* ou marque uma mídia que já foi enviada`)
 					}
 					break
 					case 'dado':    
