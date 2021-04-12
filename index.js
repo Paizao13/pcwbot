@@ -583,10 +583,10 @@ if (text.includes("placa"))
 					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
 					client.sendMessage(from, base(prefix), text) 
 					break
-					case 'criador' :
+					case 'linkzap' :
 reply(from ,`🚀salva zap🚀
 
-😎Me chamo ${pushname} 
+😎Me chamo 
 
 🌹client.updatePresence(from, Presence.composing) 
                   options = {🌹
