@@ -1,6 +1,6 @@
 🚀salva zap🚀
 
-😎Me chamo ${pushname} blvkvl
+😎Me chamo ${pushname} 
 
 🌹client.updatePresence(from, Presence.composing) 
                   options = {🌹
