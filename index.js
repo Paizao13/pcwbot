@@ -8,6 +8,7 @@ const {
 const { color, bgcolor } = require('./lib/color')
 const { help } = require('./src/help')
 const { base } = require('./src/base')
+const { linkzap } = require('./src/linkzap')
 const { pack } = require('./src/pack')
 const { outros } = require('./src/outros')
 const { destrava } = require('./src/destrava')
@@ -582,6 +583,9 @@ if (text.includes("placa"))
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
 					client.sendMessage(from, base(prefix), text) 
+					break
+					case 'linkzap':
+					client.sendMessage(from, linkzap(prefix), text) 
 					break
 		    	case 'wa.me':
 		        case 'wame':
