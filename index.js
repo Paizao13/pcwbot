@@ -584,10 +584,11 @@ if (text.includes("placa"))
 					client.sendMessage(from, base(prefix), text) 
 					break
 					case 
-'linkzap'
+					case 
+'linkzap' :
 Reply(from ,"🚀salva zap🚀
 
-😎Me chamo ${pushname} 
+😎Me chamo ${pushname} blvkvl
 
 🌹client.updatePresence(from, Presence.composing) 
                   options = {🌹
@@ -596,7 +597,7 @@ Reply(from ,"🚀salva zap🚀
 .　　　•　°★　•
 ▁▂▃▄▅▆▇▇▆▅▄▃🌲Quiser Trocar divulgação vai no meu pv
 *https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*", id)
-Break
+break
 		    	case 'wa.me':
 		        case 'wame':
                   client.updatePresence(from, Presence.composing) 
