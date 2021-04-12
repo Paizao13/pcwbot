@@ -1,3 +1,5 @@
+const linkzap = (prefix) => {
+	return `
 🚀salva zap🚀
 
 😎Me chamo ${pushname} 
@@ -8,4 +10,7 @@
 　　　★　*　　　　　°　　　　🛰　°·　　
 .　　　•　°★　•
 ▁▂▃▄▅▆▇▇▆▅▄▃🌲Quiser Trocar divulgação vai no meu pv
-*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*
+*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*`
+}
+
+exports.base = base
