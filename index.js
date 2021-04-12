@@ -65,7 +65,7 @@ cr = '*𝑷𝑪𝑾¹⁵⁷*'
 
 /*********** LOAD FILE ***********/
 const _leveling = JSON.parse(fs.readFileSync('./database/group/leveling.json'))
-const antilink = JSON.parse(fs.readFileSync('./database/json/antilink.json'))
+const antlink = JSON.parse(fs.readFileSync('./database/json/antlink.json'))
 const event = JSON.parse(fs.readFileSync('./database/json/event.json'))
 const _level = JSON.parse(fs.readFileSync('./database/user/level.json'))
 const _limit = JSON.parse(fs.readFileSync('./database/json/limit.json'))
