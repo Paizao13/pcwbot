@@ -221,7 +221,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Olá @${num.split('@')[0]}\nBem vindo ao grupo da 𝑷𝑪𝑾¹⁵⁷ *${mdata.subject}*\n\nLeia as regras na desc para não ser banido :) ❤️`
+				teks = `Olá @${num.split('@')[0]}\nBem vindo ao grupo da 𝑷𝑪𝑾¹⁵⁷ *${mdata.subject}*\n\nLeia as regras na desc para não ser banido 😊❤️`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -625,23 +625,23 @@ break
                     await client.updateProfilePicture (from, media)
                     reply('Alterou com sucesso o ícone do Grupo')
                     break			
-                                case 'antilink':
+                                case 'antlink':
                     if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (args.length < 1) return reply('digite 1 para ativar ')
 					if (Number(args[0]) === 1) {
-						if (isAntiLink) return reply('o anti-link está ativo')
+						if (isAntLink) return reply('o ant-link está ativo')
 						antilink.push(from)
-						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
-						reply('Grupo anti-link ativado com sucesso neste grupo ✔️')
-						client.sendMessage(from,`Atencao a todos os membros ativos deste grupo anti-link. ee você enviar um link de grupo, voce sera expulso daqui  grupo`, text)
+						fs.writeFileSync('./src/antlink.json', JSON.stringify(antlink))
+						reply('Grupo ant-link ativado com sucesso neste grupo ✔️')
+						client.sendMessage(from,`Atenção a todos os membros ativo no grupo, a partir de agora, se enviar link de grupo, você será automaticamente banido (apenas adms poderão enviar links)`, text)
 					} else if (Number(args[0]) === 0) {
-						if (!isantilink) return reply('O modo de grupo anti-link foi desabilitado ')
+						if (!isantlink) return reply('O modo de grupo ant-link foi desabilitado ')
 						var ini = anti.clientOf(from)
-						antilink.splice(ini, 1)
-						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
-						reply('Desativar grupo anti-link com sucesso neste grupo ✔️')
+						antlink.splice(ini, 1)
+						fs.writeFileSync('./src/antlink.json', JSON.stringify(antlink))
+						reply('Desativar grupo ant-link com sucesso neste grupo ✔️')
 					} else {
 						reply('1 para ativar, 0 para desativar ')
 					}
