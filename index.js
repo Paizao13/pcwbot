@@ -312,7 +312,7 @@ async function starts() {
 			const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
 			const isWelkom = isGroup ? welkom.includes(from) : false
 			const isNsfw = isGroup ? nsfw.includes(from) : true
-            const isAntiLink = isGroup ? antilink.includes(from) : false
+            const isAntLink = isGroup ? antlink.includes(from) : false
 	    	const isAnime = isGroup ? anime.includes(from) : false
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
@@ -422,7 +422,7 @@ if (text.includes("placa"))
 	
 	        if (messagesC.includes("://chat.whatsapp.com/")){
 		if (!isGroup) return
-		if (!isAntiLink) return
+		if (!isAntLink) return
 		if (isGroupAdmins) return reply('vc é admin, então n irei te dar ban por usar links, rlx 🙂')
 		client.updatePresence(from, Presence.composing)
 		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
@@ -455,7 +455,7 @@ if (text.includes("placa"))
 	
 		        if (messagesC.includes("https://")){
 		if (!isGroup) return
-		if (!isAntiLink) return
+		if (!isAntLink) return
 		if (isGroupAdmins) return reply('vc é admin, então n irei te dar ban por usar links, rlx 🙂')
 		client.updatePresence(from, Presence.composing)
 		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
@@ -632,7 +632,7 @@ break
 					if (args.length < 1) return reply('digite 1 para ativar ')
 					if (Number(args[0]) === 1) {
 						if (isAntLink) return reply('o ant-link está ativo')
-						antilink.push(from)
+						antlink.push(from)
 						fs.writeFileSync('./src/antlink.json', JSON.stringify(antlink))
 						reply('Grupo ant-link ativado com sucesso neste grupo ✔️')
 						client.sendMessage(from,`Atenção a todos os membros ativo no grupo, a partir de agora, se enviar link de grupo, você será automaticamente banido (apenas adms poderão enviar links)`, text)
