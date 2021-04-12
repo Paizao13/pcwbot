@@ -584,19 +584,9 @@ if (text.includes("placa"))
 					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
 					client.sendMessage(from, base(prefix), text) 
 					break
-					case 'linkzap' :
-reply(from ,`🚀salva zap🚀
-
-😎Me chamo ${pushname} blvkvl
-
-🌹client.updatePresence(from, Presence.composing) 
-                  options = {🌹
-🌞　　　　🛸　　　 　🌎　°　　🌓　•　　.°•　　　🚀 ✯✯　　
-　　　★　*　　　　　°　　　　🛰　°·　　
-.　　　•　°★　•
-▁▂▃▄▅▆▇▇▆▅▄▃🌲Quiser Trocar divulgação vai no meu pv
-*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*`, id)
-break
+					case 'linkzap'
+					client.sendMessage(from, linkzap(prefix), text) 
+					break
 		    	case 'wa.me':
 		        case 'wame':
                   client.updatePresence(from, Presence.composing) 
