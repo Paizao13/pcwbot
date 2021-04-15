@@ -808,9 +808,9 @@ break
 					buffer = await getBuffer(`https://i.imgur.com/dPUVFF6.png`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*_Comandos basicos para bot:_*\n\n*pkg upgrade && pkg update*\n*pkg install git*\n*git clone (link da git)*\n*cd (repositório)*\n*bash install.sh*\n*npm start*\n\n*PCW NO CONTROLE*'})
 					break
-					case 'vghost':
+					case 'hidetag':
 					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isOwner) return reply(mess.only.ownerB)
 					var value = body.slice(9)
 					var group = await client.groupMetadata(from)
 					var member = group['participants']
