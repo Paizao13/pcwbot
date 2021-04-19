@@ -60,10 +60,10 @@ const help = (prefix) => {
 ╠═══⚔️〘 INTERATIVOS 〙⚔️════
 ╠➥ *bot*
 ╠➥ *canal*
-╠➥ *cadebot*
-╠➥ *eaebot*
+╠➥ *kdobot*
+╠➥ *eae*
 ╠➥ *fdp*
-╠➥ *obgd bot*
+╠➥ *obgd*
 ╠➥ *vtmnc*
 ║
 ╠═══⚔️ 〘 DONO 〙⚔️════
