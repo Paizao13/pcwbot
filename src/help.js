@@ -4,13 +4,9 @@ const help = (prefix) => {
                     *𝑷𝑪𝑾¹⁵⁷ - BOT*
 ⛥ ═════════════════════ ⛥ 
      
-⠀⠀⠀⠀⠀.      ⣷　　　　　　
- ⢄⡀⠀⠀⠀⠀⠀⣿⣿⡄⠀⠀⠀⠀⠀⣠⠂ ⠀
-   ⢻⣶⣄⠀⠀⢀⣿⣿⡇⠀⠀⣠⣴⣾⠃ ⠀⠀
-     ⢻⣿⣷⡄⢸⣿⣿⡇⢀⣾⣿⣿⠏ ⠀    
-  ⠀⠀⠙⢿⣿⡄⢿⡿⣰⣿⣿⠟⠃          
-    ⠐⠶⣶⣶⣦⣍⠛⠜⠳⢛⣫⣵⣶⣾⠿⠋⠉ ⠀⠀
-        ⠉⣩⡽⠗⢡⠙⢯⣭⣉⠉
+. █▀▀█ █▀▀█ █░░▒█
+. █▄▄█ █░░░ █▒█▒█
+. █░░░ █▄▄█ █▄▀▄█
 
 *DONO: ᴘᴀɪᴢᴀ̃ᴏ⁰²⁷*
 *BOT: 𝑷𝑪𝑾¹⁵⁷ V2*
@@ -21,24 +17,27 @@ const help = (prefix) => {
 ╠🛠 wa.me/5527997179500
 ╠🛠 𝐒𝐓𝐀𝐓𝐔𝐒: ON
 ║
+╠═══⚔️ 〘 Tag/Recado 〙⚔️════
+╠➥ *tag*
+╠➥ *recado*
 ╠═══⚔️ 〘 MENU 〙⚔️════
-╠➥ *${prefix}tag*
-╠➥ *${prefix}recado*
 ║
-╠➥ *${prefix}pfig*
-╠➥ *${prefix}ptoimg*
+╠➥ *${prefix}sticker*
+╠➥ *${prefix}converter* ( converter fig em imagem )
 ╠➥ *${prefix}txtfig*
 ║
 ╠═══⚔️〘 GRUPO 〙⚔️════
-╠➥ *${prefix}antilink [somente adm]
-╠➥ *${prefix}antiracismo [somente adm]*
+╠➥ *${prefix}antlink [somente adm]
+╠➥ *${prefix}antracismo [somente adm]*
 ╠➥ *${prefix}admins* 
+╠➥ *${prefix}base* [somente adm]
 ╠➥ *${prefix}banir [@]* 
 ╠➥ *${prefix}bemvindo [1/0]* 
 ╠➥ *${prefix}linkgp [somente adm]* 
 ╠➥ *${prefix}pcwall* 
 ╠➥ *${prefix}pcwall2*
 ╠➥ *${prefix}pcwall3*
+╠➥ *${prefix}pcwall4*
 ╠➥ *${prefix}promover [@]*
 ╠➥ *${prefix}rebaixar [@]*
 ╠➥ *${prefix}setnome [somente adm]*
@@ -59,11 +58,18 @@ const help = (prefix) => {
 ╠➥ *${prefix}dono*
 ║
 ╠═══⚔️〘 INTERATIVOS 〙⚔️════
-╠➥ *bot lindo*
-╠➥ *eae bot*
+╠➥ *bot*
+╠➥ *canal*
+╠➥ *cadebot*
+╠➥ *eaebot*
 ╠➥ *fdp*
-╠➥ *obgd bot*
+╠➥ *obgdbot*
 ╠➥ *vtmnc*
+║
+╠═══⚔️ 〘 DONO 〙⚔️════
+╠➥ *${prefix}ptm* (tm de avisa)
+╠➥ *${prefix}ptm2* (tm de divulgação)
+╠➥ *${prefix}ptm3* (tm admin)
 ║
 ╠═══ ⚔️ 〘 PZO NO CONTROLE 〙⚔️════
 ║
