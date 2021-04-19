@@ -999,7 +999,7 @@ break
 						reply('1 para ativar e 0 para desativar')
 					}
                                       break
-                case 'ptm3':
+                case 'pt3':
 					if (!isadminbot) return reply('Quem é Você? Você não é o paizão ou o fuck')
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
@@ -1012,12 +1012,12 @@ break
 						reply('Transmisso enviada')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `[ *™ admin 𝑷𝑪𝑾¹⁵⁷ ™* ]\n\n${body.slice(4)}`)
+							sendMess(_.jid, `〘 *™ admin 𝑷𝑪𝑾¹⁵⁷ ™* 〙\n\n${body.slice(4)}`)
 						}
 						reply('Transmissão enviada')
 					}
 					break
-                case 'ptm2':
+                case 'pt2':
 					if (!isfrendsowner) return reply('Kamu siapa?')
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
@@ -1030,7 +1030,7 @@ break
 						reply('Transmissão enviada')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `[ *TRANSMISSÃO DIVULGAÇÃO* ]\n\n${body.slice(4)}`)
+							sendMess(_.jid, `〘 *TRANSMISSÃO DIVULGAÇÃO* 〙\n\n${body.slice(4)}`)
 						}
 						reply('Transmissão enviada')
 					}
