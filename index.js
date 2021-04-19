@@ -584,7 +584,6 @@ if (text.includes("placa"))
 					client.sendMessage(from, help(prefix), text)
 					break
 				case 'base':
-					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
 					client.sendMessage(from, base(prefix), text) 
 					break
