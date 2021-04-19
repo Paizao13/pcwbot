@@ -7,6 +7,7 @@ const {
 } = require('@adiwajshing/baileys')
 const { color, bgcolor } = require('./lib/color')
 const { help } = require('./src/help')
+const { canal } = require ('./src/canal')
 const { base } = require('./src/base')
 const { pack } = require('./src/pack')
 const { outros } = require('./src/outros')
@@ -294,11 +295,11 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net","556285638976@s.whatsapp.net"] // replace this with your number
-			const mod = [ownerNumber,"5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net","556285638976@s.whatsapp.net"]//ubah nomor lo
-			const adminbotnumber = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net","556285638976@s.whatsapp.net"]//ubah nomor lo
-			const premium = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net"] 
-			const frendsowner = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net","556285638976@s.whatsapp.net"]//ubah nomor lo
+			const ownerNumber = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net"] // replace this with your number
+			const mod = [ownerNumber,"5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net"]//ubah nomor lo
+			const adminbotnumber = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net"]//ubah nomor lo
+			const premium = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net"]
+			const frendsowner = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net"]//ubah nomor lo
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -516,9 +517,24 @@ if (text.includes("placa"))
 			reply("vem tomar nescau comigo?")
 	}
 	
-	if (messagesC.includes("canal")){
+	if (messagesC.includes("PCW")){
 			client.updatePresence(from, Presence.composing)
-			reply("Canal da PCW: https://youtube.com/channel/UCR3if-pal1kZxnPp0hZMmWw")
+			reply("domina né bb")
+	}
+	
+	if (messagesC.includes("mary")){
+			client.updatePresence(from, Presence.composing)
+			reply("e seus 7 gados 🚶‍♀️〰️〰️🐂🐃🐂🐃🐂🐃🐂")
+	}
+	
+	if (messagesC.includes("paizao")){
+			client.updatePresence(from, Presence.composing)
+			reply("o carinha que me criou😳, wa.me/5527997179500 o mais gostoso da web")
+	}
+	
+	if (messagesC.includes("linux")){
+			client.updatePresence(from, Presence.composing)
+			reply("do kali")
 	}
 	
 		if (messagesC.includes("vsfd")){
@@ -784,7 +800,7 @@ break
 					client.sendMessage(from, ule, text, { quoted: mek })
 					break
 					case 'txtfig':
-				   if (args.length < 1) return reply(`ERROR: kd o texto?? \nUso: ${prefix}txtfig (seu texto aqui)`)
+				   if (args.length < 1) return reply(`ERROR: faltou o texto🙄😂 \nUso: ${prefix}txtfig (seu texto aqui)`)
 				   try{
 				      var txtfig = body.slice(7).trim()
 				      reply(mess.wait)
@@ -803,6 +819,7 @@ break
 					break
 					case 'pcwall4':
 					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
 					if (!isOwner) return reply(mess.only.ownerB)
 					var value = body.slice(9)
 					var group = await client.groupMetadata(from)
@@ -828,10 +845,10 @@ break
 					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL9hZBPRo16fIhsIus3t1je2oAU23pQqBpfw&usqp=CAU`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '️💆'})
 					break
-				case 'canal':
-					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://imgur.com/gallery/xuTCBPO`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '️*canal do 𓇽͢ 𝑷𝑹𝑰𝑴𝑬𝑰𝑹𝑶͢ 𝑪𝑶𝑴𝑨𝑵𝑫𝑶͢ 𝑫𝑨͢ 𝑾𝑬𝑩͢ ¹⁵⁷:*\n\n https://youtube.com/channel/UCJHID_3QlOEVSrgW4F0s73Q'})
+					case 'canal':
+				    if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
+					client.sendMessage(from, canal(prefix), text) 
 					break
 				case 'termux':
 					meme = await kagApi.memes()
