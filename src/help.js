@@ -20,6 +20,7 @@ const help = (prefix) => {
 ╠═══⚔️ 〘 Tag/Recado 〙⚔️════
 ╠➥ *tag*
 ╠➥ *recado*
+║
 ╠═══⚔️ 〘 MENU 〙⚔️════
 ║
 ╠➥ *${prefix}sticker*
@@ -27,19 +28,19 @@ const help = (prefix) => {
 ╠➥ *${prefix}txtfig*
 ║
 ╠═══⚔️〘 GRUPO 〙⚔️════
-╠➥ *${prefix}antlink [somente adm]
-╠➥ *${prefix}antracismo [somente adm]*
+╠➥ *${prefix}antlink [1/0] [somente adm]*
+╠➥ *${prefix}antracismo [on/off] [somente adm]*
 ╠➥ *${prefix}admins* 
-╠➥ *${prefix}base* [somente adm]
-╠➥ *${prefix}banir [@]* 
-╠➥ *${prefix}bemvindo [1/0]* 
+╠➥ *${prefix}base [somente adm]*
+╠➥ *${prefix}banir [@] [somente adm]*
+╠➥ *${prefix}bemvindo [1/0] [somente adm]*
 ╠➥ *${prefix}linkgp [somente adm]* 
-╠➥ *${prefix}pcwall* 
-╠➥ *${prefix}pcwall2*
-╠➥ *${prefix}pcwall3*
-╠➥ *${prefix}pcwall4*
-╠➥ *${prefix}promover [@]*
-╠➥ *${prefix}rebaixar [@]*
+╠➥ *${prefix}pcwall [somente adm]*
+╠➥ *${prefix}pcwall2 [somente adm]*
+╠➥ *${prefix}pcwall3 [somente adm]*
+╠➥ *${prefix}pcwall4 [somente adm]*
+╠➥ *${prefix}promover [@] [somente adm]*
+╠➥ *${prefix}rebaixar [@] [somente adm]*
 ╠➥ *${prefix}setnome [somente adm]*
 ╠➥ *${prefix}setfoto [na legenda] - [somente adm]*
 ║
@@ -60,11 +61,13 @@ const help = (prefix) => {
 ╠═══⚔️〘 INTERATIVOS 〙⚔️════
 ╠➥ *bot*
 ╠➥ *canal*
-╠➥ *kdobot*
 ╠➥ *eae*
 ╠➥ *fdp*
+╠➥ *kdobot*
 ╠➥ *obgd*
+╠➥ *PCW*
 ╠➥ *vtmnc*
+╠➥ *vsfd*
 ║
 ╠═══⚔️ 〘 DONO 〙⚔️════
 ╠➥ *${prefix}ptm* (tm de avisa)
