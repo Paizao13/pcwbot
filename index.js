@@ -297,6 +297,7 @@ async function starts() {
 			const ownerNumber = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net","556285638976@s.whatsapp.net"] // replace this with your number
 			const mod = [ownerNumber,"5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net","556285638976@s.whatsapp.net"]//ubah nomor lo
 			const adminbotnumber = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net","556285638976@s.whatsapp.net"]//ubah nomor lo
+			const premium = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net"] 
 			const frendsowner = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net","556285638976@s.whatsapp.net"]//ubah nomor lo
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
