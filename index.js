@@ -488,7 +488,7 @@ if (text.includes("placa"))
 	
 	if (messagesC.includes("fdp")){
 			client.updatePresence(from, Presence.composing)
-			reply("teu pai")
+			reply("fala do paizão")
 	}
 	
 	if (messagesC.includes("tag")){
@@ -501,7 +501,7 @@ if (text.includes("placa"))
 			reply("𓇽͢ 𝑷𝑹𝑰𝑴𝑬𝑰𝑹𝑶͢ 𝑪𝑶𝑴𝑨𝑵𝑫𝑶͢ 𝑫𝑨͢ 𝑾𝑬𝑩͢ ¹⁵⁷*")
 	}
 	
-	if (messagesC.includes("obgd bot")){
+	if (messagesC.includes("obgd")){
 			client.updatePresence(from, Presence.composing)
 			reply("de nd broo")
 	}
@@ -523,15 +523,15 @@ if (text.includes("placa"))
 	
 		if (messagesC.includes("vsfd")){
 			client.updatePresence(from, Presence.composing)
-			reply("bora juntos?")
+			reply("vai você, já me disse que era mo bom")
 	}
 	
-	if (messagesC.includes("eaebot")){
+	if (messagesC.includes("eae")){
 			client.updatePresence(from, Presence.composing)
 			reply("eae lindo(a), tudo bom?")
 	}
 	
-		if (messagesC.includes("cadebot")){
+		if (messagesC.includes("kdobot")){
 			client.updatePresence(from, Presence.composing)
 			reply("sabe deus")
 	}
