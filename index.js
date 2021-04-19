@@ -501,7 +501,7 @@ if (text.includes("placa"))
 			reply("𓇽͢ 𝑷𝑹𝑰𝑴𝑬𝑰𝑹𝑶͢ 𝑪𝑶𝑴𝑨𝑵𝑫𝑶͢ 𝑫𝑨͢ 𝑾𝑬𝑩͢ ¹⁵⁷*")
 	}
 	
-	if (messagesC.includes("obgdbot")){
+	if (messagesC.includes("obgd bot")){
 			client.updatePresence(from, Presence.composing)
 			reply("de nd broo")
 	}
@@ -1001,7 +1001,7 @@ break
                                       break
                 case 'pt3':
 					if (!isadminbot) return reply('Quem é Você? Você não é o paizão ou o fuck')
-					if (args.length < 1) return reply('.......')
+					if (args.length < 1) return reply('FALTOU O TEXTO')
 					anu = await client.chats.all()
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -1019,7 +1019,7 @@ break
 					break
                 case 'pt2':
 					if (!isfrendsowner) return reply('Kamu siapa?')
-					if (args.length < 1) return reply('.......')
+					if (args.length < 1) return reply('FALTOU O TEXTO')
 					anu = await client.chats.all()
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
