@@ -517,7 +517,7 @@ if (text.includes("placa"))
 			reply("vem tomar nescau comigo?")
 	}
 	
-	if (messagesC.includes("PCW")){
+	if (messagesC.includes("pcw")){
 			client.updatePresence(from, Presence.composing)
 			reply("domina né bb")
 	}
