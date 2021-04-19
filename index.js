@@ -58,7 +58,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'ORG:Lexa;\n' // Nama bot
             + 'TEL;type=CELL;type=VOICE;waid=5527997179500:+55 27997179500\n' //Nomor whatsapp kamu
             + 'END:VCARD'
-prefix = '*'
+prefix = '%'
 blocked = []
 limitawal = '999999999'
 cr = '*𝑷𝑪𝑾¹⁵⁷*'
@@ -280,25 +280,24 @@ async function starts() {
 					levelnoton: '❬ X ❭ *leveling não ativado*',
 					levelnol: '*error* 0 °-°',
 					error: {
-				stick: '*Bem, falhe, tente novamente ^_^*',
+				stick: '*Falhou, tente novamente*',
 				Iv: '𝗠𝗮𝗮𝗳 𝗹𝗶𝗻𝗸 𝘁𝗶𝗱𝗮𝗸 𝘃𝗮𝗹𝗶𝗱☹️'
 				},
 				only: {
 					group: '[⚠️] Impossível utilizar fora do grupo da 𝑷𝑪𝑾¹⁵⁷',
-					benned: 'Você para a banda, por favor, contate o proprietário para abrir sua banda',
+					benned: 'Banido by botzin KKKKKKK',
 					
 					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmã. Você não está registrado como amigo de PCW. Registre-se para fazer amizade com o bot PCW por meio, \n\nCommand : ${prefix}daftar nama|idade\nExemplo : ${prefix}daftar PCW|17\n\n──「 PCW BOT 」──`,
 					admin: 'Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK',
-					Badmin: ' [⚠️] Este comando só pode ser usado quando o bot se torna administrador! ❌',
+					Badmin: ' [⚠️] O 𝑷𝑪𝑾¹⁵⁷ - BOT AINDA NÃO É ADM DAQUI',
 				}
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net"] // replace this with your number
-			const mod = [ownerNumber,"5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net"]//ubah nomor lo
-			const adminbotnumber = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net"]//ubah nomor lo
-			const frendsowner = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net"]//ubah nomor lo
-			const premium = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net"] 
+			const ownerNumber = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net","556285638976@s.whatsapp.net"] // replace this with your number
+			const mod = [ownerNumber,"5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net","556285638976@s.whatsapp.net"]//ubah nomor lo
+			const adminbotnumber = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net","556285638976@s.whatsapp.net"]//ubah nomor lo
+			const frendsowner = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net","556285638976@s.whatsapp.net"]//ubah nomor lo
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -501,6 +500,11 @@ if (text.includes("placa"))
 			reply("𓇽͢ 𝑷𝑹𝑰𝑴𝑬𝑰𝑹𝑶͢ 𝑪𝑶𝑴𝑨𝑵𝑫𝑶͢ 𝑫𝑨͢ 𝑾𝑬𝑩͢ ¹⁵⁷*")
 	}
 	
+	if (messagesC.includes("obgdbot")){
+			client.updatePresence(from, Presence.composing)
+			reply("de nd broo")
+	}
+	
 		if (messagesC.includes("corno")){
 			client.updatePresence(from, Presence.composing)
 			reply("teu pai")
@@ -521,19 +525,19 @@ if (text.includes("placa"))
 			reply("bora juntos?")
 	}
 	
+	if (messagesC.includes("eaebot")){
+			client.updatePresence(from, Presence.composing)
+			reply("eae lindo(a), tudo bom?")
+	}
+	
 		if (messagesC.includes("cadebot")){
 			client.updatePresence(from, Presence.composing)
 			reply("sabe deus")
 	}
 	
-		if (messagesC.includes("eae bot")){
+	if (messagesC.includes("bot")){
 			client.updatePresence(from, Presence.composing)
-			reply("eae lindo, tudo bom?")
-	}
-	
-	if (messagesC.includes("bot lindo")){
-			client.updatePresence(from, Presence.composing)
-			reply("são seus olhos b😊")
+			reply("Fala ae man, to aqui.")
 	}
 	
 				if (messagesC.includes("canta")){
@@ -583,19 +587,6 @@ if (text.includes("placa"))
 					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
 					client.sendMessage(from, base(prefix), text) 
 					break
-					case 
-'Criador' :
-Reply(from ,`🚀salva zap🚀
-
-😎Me chamo blvkvl
-
-🌹client.updatePresence(from, Presence.composing) 
-                  options = {🌹
-🌞　　　　🛸　　　 　🌎　°　　🌓　•　　.°•　　　🚀 ✯✯　　
-　　　★　*　　　　　°　　　　🛰　°·　　
-.　　　•　°★　•
-▁▂▃▄▅▆▇▇▆▅▄▃🌲Quiser Trocar divulgação vai no meu pv`, id)
-break
 		    	case 'wa.me':
 		        case 'wame':
                   client.updatePresence(from, Presence.composing) 
@@ -689,7 +680,8 @@ break
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
-					case 'pfig':
+					case 'sticker':
+					case 's':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await client.downloadAndSaveMediaMessage(encmedia)
@@ -779,7 +771,7 @@ break
 							.toFormat('webp')
 							.save(ran)*/
 					} else {
-						reply(`Envie mídia com a legenda **pfig* ou marque uma mídia que já foi enviada`)
+						reply(`Envie mídia com a legenda *%sticker ou %s* ou marque uma mídia que já foi enviada`)
 					}
 					break
 					case 'dado':    
@@ -808,7 +800,7 @@ break
 					buffer = await getBuffer(`https://i.imgur.com/dPUVFF6.png`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*_Comandos basicos para bot:_*\n\n*pkg upgrade && pkg update*\n*pkg install git*\n*git clone (link da git)*\n*cd (repositório)*\n*bash install.sh*\n*npm start*\n\n*PCW NO CONTROLE*'})
 					break
-					case 'hidetag':
+					case 'pcwall4':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isOwner) return reply(mess.only.ownerB)
 					var value = body.slice(9)
@@ -838,7 +830,7 @@ break
 				case 'canal':
 					memein = await kagApi.memeindo()
 					buffer = await getBuffer(`https://imgur.com/gallery/xuTCBPO`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '️*canal do PCW:*\n\n https://youtube.com/channel/UCJHID_3QlOEVSrgW4F0s73Q'})
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: '️*canal do 𓇽͢ 𝑷𝑹𝑰𝑴𝑬𝑰𝑹𝑶͢ 𝑪𝑶𝑴𝑨𝑵𝑫𝑶͢ 𝑫𝑨͢ 𝑾𝑬𝑩͢ ¹⁵⁷:*\n\n https://youtube.com/channel/UCJHID_3QlOEVSrgW4F0s73Q'})
 					break
 				case 'termux':
 					meme = await kagApi.memes()
@@ -886,7 +878,7 @@ break
 					}
 					client.sendMessage(from, teks, text, {detectLinks: false, quoted: mek})
 					break
-				case 'pcwtm':
+				case 'ptm':
 					if (!isOwner) return reply('Quem é Você? Você não é o paizão ou o fuck')
 					if (args.length < 1) return reply('Qual foi mano, esqueceu do texto')
 					anu = await client.chats.all()
@@ -894,12 +886,12 @@ break
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						buff = await client.downloadMediaMessage(encmedia)
 						for (let _ of anu) {
-							client.sendMessage(_.jid, buff, image, {caption: `[ TRANSMIÇÃO DE AVISO ]\n\n${body.slice(4)}`})
+							client.sendMessage(_.jid, buff, image, {caption: `[ TRANSMISSÃO DE AVISO ]\n\n${body.slice(4)}`})
 						}
 						reply('Transmissão enviada com sucesso')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `[ TRANSMISSÃO DE AVISO PCW ]\n\n${body.slice(4)}`)
+							sendMess(_.jid, `〘 TRANSMISSÃO DE AVISO PCW 〙\n\n${body.slice(4)}`)
 						}
 						reply('Transmissão enviada com sucesso')
 					}
@@ -975,7 +967,7 @@ break
                                         linkgc = await client.groupInviteCode(from)
                                         reply('https://chat.whatsapp.com/'+linkgc)
                                         break
-					case 'ptoimg':
+					case 'converter':
 					if (!isQuotedSticker) return reply('{ ⚠️ } *Marque a figurinha*')
 					reply(mess.wait)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -992,9 +984,9 @@ break
 				case 'bemvindo':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('tente usar *bemvindo 1')
+					if (args.length < 1) return reply('tente usar %bemvindo 1')
 					if (Number(args[0]) === 1) {
-						if (isWelkom) return reply('Já esta ativo.')
+						if (isWelkom) return reply('Já foi ativado.')
 						welkom.push(from)
 						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
 						reply('Mensagem de boas-vindas da 𝑷𝑪𝑾¹⁵⁷ ativado 😉️')
@@ -1006,7 +998,7 @@ break
 						reply('1 para ativar e 0 para desativar')
 					}
                                       break
-                case 'pcwtm2':
+                case 'ptm3':
 					if (!isadminbot) return reply('Quem é Você? Você não é o paizão ou o fuck')
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
@@ -1019,12 +1011,12 @@ break
 						reply('Transmisso enviada')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `[ *admin bot Broadcast* ]\n\n${body.slice(4)}`)
+							sendMess(_.jid, `[ *™ admin 𝑷𝑪𝑾¹⁵⁷ ™* ]\n\n${body.slice(4)}`)
 						}
 						reply('Transmissão enviada')
 					}
 					break
-                case 'pcwtm3':
+                case 'ptm2':
 					if (!isfrendsowner) return reply('Kamu siapa?')
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
