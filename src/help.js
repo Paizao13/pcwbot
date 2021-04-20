@@ -51,6 +51,7 @@ const help = (prefix) => {
 ╠➥ *${prefix}bot*
 ╠➥ *${prefix}canal*
 ╠➥ *${prefix}lofi*
+╠➥ *${prefix}pcwinsta*
 ╠➥ *${prefix}termux*
 ╠➥ *${prefix}wa.me*
 ║
@@ -65,7 +66,7 @@ const help = (prefix) => {
 ╠➥ *fdp*
 ╠➥ *kdobot*
 ╠➥ *obgd*
-╠➥ *PCW*
+╠➥ *pcw*
 ╠➥ *vtmnc*
 ╠➥ *vsfd*
 ║
