@@ -7,7 +7,8 @@ const {
 } = require('@adiwajshing/baileys')
 const { color, bgcolor } = require('./lib/color')
 const { help } = require('./src/help')
-const { canal } = require ('./src/canal')
+const { pcwinsta } = require('./src/pcwinsta')
+const { canal } = require('./src/canal')
 const { base } = require('./src/base')
 const { pack } = require('./src/pack')
 const { outros } = require('./src/outros')
@@ -569,6 +570,12 @@ if (text.includes("placa"))
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
+	if (messagesC.includes("pcw")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/pcw.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
 			if (messagesC.includes("bv")){
 			client.updatePresence(from, Presence.composing)
 			tujuh = fs.readFileSync('./assets/bv.mp3');
@@ -636,6 +643,10 @@ client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audi
 break
 case 'fdp':
 tujuh = fs.readFileSync('./assets/fdp.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'pcw':
+tujuh = fs.readFileSync('./assets/pcw.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 				case 'setfoto':
@@ -849,6 +860,11 @@ break
 				    if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
 					client.sendMessage(from, canal(prefix), text) 
+					break
+					case 'pcwinsta':
+				    if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
+					client.sendMessage(from, pcwinsta(prefix), text) 
 					break
 				case 'termux':
 					meme = await kagApi.memes()
