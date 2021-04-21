@@ -528,6 +528,16 @@ if (text.includes("placa"))
 			reply("e seus 7 gados 🚶‍♀️〰️〰️🐂🐃🐂🐃🐂🐃🐂")
 	}
 	
+	if (messagesC.includes("haddes")){
+			client.updatePresence(from, Presence.composing)
+			reply("tem cura não man😞")
+	}
+	
+	if (messagesC.includes("fuck")){
+			client.updatePresence(from, Presence.composing)
+			reply("dev cornin🐂")
+	}
+	
 	if (messagesC.includes("paizao")){
 			client.updatePresence(from, Presence.composing)
 			reply("o carinha que me criou😳, wa.me/5527997179500 o mais gostoso da web")
@@ -536,6 +546,11 @@ if (text.includes("placa"))
 	if (messagesC.includes("linux")){
 			client.updatePresence(from, Presence.composing)
 			reply("do kali")
+	}
+	
+	if (messagesC.includes("kitar")){
+			client.updatePresence(from, Presence.composing)
+			reply("é man, eu e o paizão tbm")
 	}
 	
 		if (messagesC.includes("vsfd")){
@@ -643,10 +658,6 @@ client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audi
 break
 case 'fdp':
 tujuh = fs.readFileSync('./assets/fdp.mp3');
-client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'pcw':
-tujuh = fs.readFileSync('./assets/pcw.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 				case 'setfoto':
