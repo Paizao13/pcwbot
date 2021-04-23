@@ -503,7 +503,7 @@ if (text.includes("placa"))
 			reply("𓇽͢ 𝑷𝑹𝑰𝑴𝑬𝑰𝑹𝑶͢ 𝑪𝑶𝑴𝑨𝑵𝑫𝑶͢ 𝑫𝑨͢ 𝑾𝑬𝑩͢ ¹⁵⁷")
 	}
 	
-	if (messagesC.includes("%play")){
+	if (messagesC.includes("*play")){
 			client.updatePresence(from, Presence.composing)
 			reply("⚠️*COMANDO REMOVIDO POR MUITO FLOOD*⚠️")
 	}
@@ -857,7 +857,7 @@ break
 					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4V_4fdvF8rluX0T3KKGOvY0TusMwx7nVWtw&usqp=CAU`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*CRIADOR:* ᴘᴀɪᴢᴀ̃ᴏ⁰²⁷\n*YOUTUBE:* https://youtube.com/channel/UCJHID_3QlOEVSrgW4F0s73Q\n*WPP:* wa.me/+5527997179500\n*INSTA:* To sem no momento.\n\n\nEspero que tenham gostado do bot 🐊🚩️'})
 					break
-					case 'marcar':
+					case 'pcwall':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
@@ -869,7 +869,9 @@ break
 					}
 					mentions(teks, members_id, true)
 					break
-                case 'marcar2':
+                case 'pcwall2':
+                if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -879,7 +881,9 @@ break
 					}
 					reply(teks)
 					break
-                 case 'marcar3':
+                 case 'pcwall3':
+                 if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
