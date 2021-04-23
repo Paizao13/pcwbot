@@ -38,14 +38,10 @@ const help = (prefix) => {
 ╠➥ *${prefix}pcwall [somente adm]*
 ╠➥ *${prefix}pcwall2 [somente adm]*
 ╠➥ *${prefix}pcwall3 [somente adm]*
-╠➥ *${prefix}pcwall4 [somente adm]*
 ╠➥ *${prefix}promover [@] [somente adm]*
 ╠➥ *${prefix}rebaixar [@] [somente adm]*
 ╠➥ *${prefix}setnome [somente adm]*
 ╠➥ *${prefix}setfoto [na legenda] - [somente adm]*
-║
-╠═══⚔️〘 MÚSICA 〙⚔️════
-╠➥ *${prefix}play*
 ║
 ╠═══⚔️〘 OUTROS 〙⚔️════
 ╠➥ *${prefix}bot*
