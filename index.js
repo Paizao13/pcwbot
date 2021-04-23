@@ -533,6 +533,11 @@ if (text.includes("placa"))
 			reply("tem cura não man😞")
 	}
 	
+	if (messagesC.includes("paizao")){
+			client.updatePresence(from, Presence.composing)
+			reply("caça tckibamentos😡🤬")
+	}
+	
 	if (messagesC.includes("fuck")){
 			client.updatePresence(from, Presence.composing)
 			reply("dev cornin🐂")
