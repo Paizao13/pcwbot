@@ -60,7 +60,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'ORG:Lexa;\n' // Nama bot
             + 'TEL;type=CELL;type=VOICE;waid=5527997179500:+55 27997179500\n' //Nomor whatsapp kamu
             + 'END:VCARD'
-prefix = '%'
+prefix = '*'
 blocked = []
 limitawal = '999999999'
 cr = '*𝑷𝑪𝑾¹⁵⁷*'
@@ -500,7 +500,12 @@ if (text.includes("placa"))
 	
 	if (messagesC.includes("recado")){
 			client.updatePresence(from, Presence.composing)
-			reply("𓇽͢ 𝑷𝑹𝑰𝑴𝑬𝑰𝑹𝑶͢ 𝑪𝑶𝑴𝑨𝑵𝑫𝑶͢ 𝑫𝑨͢ 𝑾𝑬𝑩͢ ¹⁵⁷*")
+			reply("𓇽͢ 𝑷𝑹𝑰𝑴𝑬𝑰𝑹𝑶͢ 𝑪𝑶𝑴𝑨𝑵𝑫𝑶͢ 𝑫𝑨͢ 𝑾𝑬𝑩͢ ¹⁵⁷")
+	}
+	
+	if (messagesC.includes("%play")){
+			client.updatePresence(from, Presence.composing)
+			reply("⚠️*COMANDO REMOVIDO POR MUITO FLOOD*⚠️")
 	}
 	
 	if (messagesC.includes("obgd")){
@@ -517,12 +522,7 @@ if (text.includes("placa"))
 			client.updatePresence(from, Presence.composing)
 			reply("vem tomar nescau comigo?")
 	}
-	
-	if (messagesC.includes("pcw")){
-			client.updatePresence(from, Presence.composing)
-			reply("domina né bb")
-	}
-	
+
 	if (messagesC.includes("mary")){
 			client.updatePresence(from, Presence.composing)
 			reply("e seus 7 gados 🚶‍♀️〰️〰️🐂🐃🐂🐃🐂🐃🐂")
@@ -689,20 +689,6 @@ break
 						reply('1 para ativar, 0 para desativar ')
 					}
 					break
-                 case 'play':
-                 if (!isGroup) return reply(mess.only.group)
-			     if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
-                reply(mess.wait)
-                play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
-               if (anu.error) return reply(anu.error)
-                 infomp3 = `*MUSICA ENCONTRADA!!!*\nTítulo : ${anu.result.title}\nUrl : ${anu.result.source}\nTamanho : ${anu.result.size}\n\n*ESPERE UM POUQUINHO, N SPAME O CHAT*`
-                buffer = await getBuffer(anu.result.thumbnail)
-                lagu = await getBuffer(anu.result.url_audio)
-                client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
-                client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
-                await limitAdd(sender)
-                break
 				case 'setnome':
                    if (!isGroup) return reply(mess.only.group)
 			       if (!isGroupAdmins) return reply(mess.only.admin)
@@ -896,14 +882,12 @@ break
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
 					for (let mem of groupMembers) {
-						teks += `*-->* @${mem.jid.split('@')[0]}\n`
+						teks += `*#* @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
 					mentions(teks, members_id, true)
 					break
 					case 'pcwall2':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -914,8 +898,6 @@ break
 					reply(teks)
 					break
 					case 'pcwall3':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
