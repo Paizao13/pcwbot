@@ -35,9 +35,9 @@ const help = (prefix) => {
 ╠➥ *${prefix}banir [@] [somente adm]*
 ╠➥ *${prefix}bemvindo [1/0] [somente adm]*
 ╠➥ *${prefix}linkgp [somente adm]* 
-╠➥ *${prefix}pcwall [somente adm]*
-╠➥ *${prefix}pcwall2 [somente adm]*
-╠➥ *${prefix}pcwall3 [somente adm]*
+╠➥ *${prefix}pall [somente adm]*
+╠➥ *${prefix}pall2 [somente adm]*
+╠➥ *${prefix}pall3 [somente adm]*
 ╠➥ *${prefix}promover [@] [somente adm]*
 ╠➥ *${prefix}rebaixar [@] [somente adm]*
 ╠➥ *${prefix}setnome [somente adm]*
