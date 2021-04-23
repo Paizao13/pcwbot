@@ -690,6 +690,8 @@ break
 					}
 					break
                  case 'play':
+                 if (!isGroup) return reply(mess.only.group)
+			     if (!isGroupAdmins) return reply('Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK')
                 reply(mess.wait)
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
