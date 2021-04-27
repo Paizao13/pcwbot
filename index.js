@@ -493,6 +493,11 @@ if (text.includes("placa"))
 			reply("fala do paizão")
 	}
 	
+	if (messagesC.includes("Karol")){
+			client.updatePresence(from, Presence.composing)
+			reply("Com K")
+	}
+	
 	if (messagesC.includes("tag")){
 			client.updatePresence(from, Presence.composing)
 			reply("𝑷𝑪𝑾¹⁵⁷")
