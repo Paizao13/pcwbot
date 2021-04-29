@@ -493,7 +493,7 @@ if (text.includes("placa"))
 			reply("fala do paizão")
 	}
 	
-	if (messagesC.includes("Karol")){
+	if (messagesC.includes("karol")){
 			client.updatePresence(from, Presence.composing)
 			reply("Com K")
 	}
