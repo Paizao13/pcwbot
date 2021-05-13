@@ -288,18 +288,18 @@ async function starts() {
 					group: '[⚠️] Impossível utilizar fora do grupo da 𝑷𝑪𝑾¹⁵⁷',
 					benned: 'Banido by botzin KKKKKKK',
 					
-					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmã. Você não está registrado como amigo de PCW. Registre-se para fazer amizade com o bot PCW por meio, \n\nCommand : ${prefix}daftar nama|idade\nExemplo : ${prefix}daftar PCW|17\n\n──「 PCW BOT 」──`,
+					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmão. Você não está registrado como amigo de PCW. Registre-se para fazer amizade com o bot PCW por meio, \n\nCommand : ${prefix}daftar nama|idade\nExemplo : ${prefix}daftar PCW|17\n\n──「 PCW BOT 」──`,
 					admin: 'Por um acaso, você é admin da 𝑷𝑪𝑾¹⁵⁷? KKKKKKKK',
 					Badmin: ' [⚠️] O 𝑷𝑪𝑾¹⁵⁷ - BOT AINDA NÃO É ADM DAQUI',
 				}
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net"] // replace this with your number
-			const mod = [ownerNumber,"5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net"]//ubah nomor lo
-			const adminbotnumber = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net"]//ubah nomor lo
-			const premium = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net"]
-			const frendsowner = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","5524999178623@s.whatsapp.net"]//ubah nomor lo
+			const ownerNumber = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","552167166419@s.whatsapp.net"] // replace this with your number
+			const mod = [ownerNumber,"5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","552167166419@s.whatsapp.net"]//ubah nomor lo
+			const adminbotnumber = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","552167166419@s.whatsapp.net"]//ubah nomor lo
+			const premium = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","552167166419@s.whatsapp.net"]
+			const frendsowner = ["5527997179500@s.whatsapp.net","351926456359@s.whatsapp.net","552167166419@s.whatsapp.net"]//ubah nomor lo
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
