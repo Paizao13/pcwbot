@@ -6,7 +6,7 @@ const canal = (prefix) => {
 
 〘 𝐂𝐀𝐍𝐀𝐋 𝐃𝐀 𝑷𝑪𝑾¹⁵⁷ 〙
 
-➔ 𝐂𝐀𝐍𝐀𝐋 𝐃𝐀 𝐎𝐅𝐈𝐂𝐈𝐀𝐋 ➣ https://youtube.com/channel/UCR3if-pal1kZxnPp0hZMmWw
+➔ 𝐂𝐀𝐍𝐀𝐋 𝐎𝐅𝐈𝐂𝐈𝐀𝐋 ➣ https://youtube.com/channel/UCeYswOOlot2mKghfcmj2VkQ
 
 ➔ 𝐂𝐀𝐍𝐀𝐋 𝐃𝐄 𝐄𝐃𝐈𝐓 ➣ https://youtube.com/channel/UCnzvrzBTDzzycCU0JxWah_g
 
@@ -21,13 +21,4 @@ https://youtube.com/channel/UCbQA5cc8bNvClfhjInyzP1g
 ➔ 𝐂𝐀𝐍𝐀𝐋 𝐃𝐎 𝐅𝐔𝐂𝐊 [𝐒𝐔𝐁-𝐋𝐈𝐃𝐄𝐑] ➣ https://youtube.com/channel/UCCXSfIsQVm1w1udGNW5hX5A
 
 ➔ 𝐂𝐀𝐍𝐀𝐋 𝐃𝐎  [𝐒𝐔𝐁-𝐋𝐈𝐃𝐄𝐑] 𝐏𝐀𝐈𝐙𝐀𝐎 ➣ https://youtube.com/channel/UCJHID_3QlOEVSrgW4F0s73Q
-
-
-〘 𝐂𝐀𝐍𝐀𝐋 𝐃𝐎𝐒 𝐏𝐑𝐎𝐅𝐄𝐒𝐒𝐎𝐑𝐄𝐒 〙
-
-➠ 𝐂𝐀𝐍𝐀𝐋 𝐃𝐎 𝐄𝐃𝐒𝐎𝐍 ➣ https://youtube.com/channel/UCfG_BIqc2qDcvrvmarOk9yg
-
-➠ 𝐂𝐀𝐍𝐀𝐋 𝐃𝐎 𝐊𝐀𝐙𝐄 ➣ https://youtube.com/channel/UCxkkDVduSFwOtWHEzEvx-nA`
-}
-
 exports.canal = canal
