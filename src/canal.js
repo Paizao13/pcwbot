@@ -20,5 +20,7 @@ https://youtube.com/channel/UCbQA5cc8bNvClfhjInyzP1g
 
 ➔ 𝐂𝐀𝐍𝐀𝐋 𝐃𝐎 𝐅𝐔𝐂𝐊 [𝐒𝐔𝐁-𝐋𝐈𝐃𝐄𝐑] ➣ https://youtube.com/channel/UCCXSfIsQVm1w1udGNW5hX5A
 
-➔ 𝐂𝐀𝐍𝐀𝐋 𝐃𝐎  [𝐒𝐔𝐁-𝐋𝐈𝐃𝐄𝐑] 𝐏𝐀𝐈𝐙𝐀𝐎 ➣ https://youtube.com/channel/UCJHID_3QlOEVSrgW4F0s73Q
-exports.canal = canal
+➔ 𝐂𝐀𝐍𝐀𝐋 𝐃𝐎  [𝐒𝐔𝐁-𝐋𝐈𝐃𝐄𝐑] 𝐏𝐀𝐈𝐙𝐀𝐎 ➣ https://youtube.com/channel/UCJHID_3QlOEVSrgW4F0s73Q`
+}
+
+exports.pcwinsta = pcwinsta
