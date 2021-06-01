@@ -862,14 +862,14 @@ break
 					client.sendMessage(from, teks, text, {detectLinks: false, quoted: mek})
 					break
 				case 'ptm':
-					if (!isOwner) return reply('Quem é Você? Você não é o paizão ou o fuck')
+					if (!isOwner) return reply('Quem é Você? Você não é o paizão')
 					if (args.length < 1) return reply('Qual foi mano, esqueceu do texto')
 					anu = await client.chats.all()
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						buff = await client.downloadMediaMessage(encmedia)
 						for (let _ of anu) {
-							client.sendMessage(_.jid, buff, image, {caption: `[ TRANSMISSÃO DE AVISO ]\n\n${body.slice(4)}`})
+							client.sendMessage(_.jid, buff, image, {caption: `〘 TRANSMISSÃO DE AVISO PCW 〙\n\n${body.slice(4)}`})
 						}
 						reply('Transmissão enviada com sucesso')
 					} else {
@@ -982,7 +982,7 @@ break
 					}
                                       break
                 case 'pt3':
-					if (!isadminbot) return reply('Quem é Você? Você não é o paizão ou o fuck')
+					if (!isadminbot) return reply('Quem é Você? Você não é o paizão')
 					if (args.length < 1) return reply('FALTOU O TEXTO')
 					anu = await client.chats.all()
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
