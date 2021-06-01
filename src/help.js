@@ -79,7 +79,7 @@ const help = (prefix) => {
 ║
 ║
 ╠➥ Canal da PCW:
-║https://youtube.com/channel/UCR3if-pal1kZxnPp0hZMmWw
+║https://youtube.com/channel/UCeYswOOlot2mKghfcmj2VkQ
 ║
 ╠➥ Canal de Edit: 
 ║https://youtube.com/channel/UCnzvrzBTDzzycCU0JxWah_g 
