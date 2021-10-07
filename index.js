@@ -836,7 +836,34 @@ case 'plaquinha2':
 					buffer = await getBuffer(`https://lculitas.sirv.com/ETw3FRnXgAI3Up_.jpg?text.0.text=${teks}&text.0.position.gravity=center&text.0.align=left&text.0.size=46&text.0.color=221b1b&text.0.opacity=47&text.0.font.family=Architects%20Daughter&text.0.background.color=783852&text.0.background.opacity=5&text.0.outline.blur=58`)
 					Pin.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ta na mão 😈\n\n𝙳𝙾𝙽𝙾: ⁷ ᴘᴀɪᴢᴀ̃ᴏ⁰²⁷'})
 					break
-					
+					case 'nickff':  
+                   if (!isRegister) return enviar(mess.only.daftarB) 
+		           if (!isPremium) return enviar(mess.only.premium)
+                   anu = await fetchJson(`https://api.zeks.me/api/nickepep?apikey=Alphabott`)
+                   anu1 = `➻ *nickzin✔* : ${anu.result}\n`
+                   
+                   reply(anu1)
+                   break
+                   case 'spotfy': 
+if (!isPremium) return enviar(mess.only.premium)
+hasil = `𝙽𝚘𝚖𝚎 : Spotfy,
+𝚃𝚒𝚙𝚘 𝚍𝚎 𝚊𝚜𝚜𝚒𝚗𝚊𝚝𝚞𝚛𝚊: Premium,
+𝚃𝚊𝚖𝚊𝚗𝚑𝚘 : 32.24mb,
+𝚃𝚒𝚙𝚘 𝚍𝚎 𝚊𝚛𝚚𝚞𝚒𝚟𝚘: Apk,
+𝙻𝚒𝚗𝚔: 
+https://www.mediafire.com/file/2r09bpq723j03jp/Spotify_MOD_By_GT.apk/file
+🌙ꪾ〬ꩌ۪⁷ ᴘᴀɪᴢᴀ̃ᴏ⁰²⁷☂︎™ domina$`
+reply(hasil)
+   break
+   case 'consultaip': 
+                    if (!isPremium) return enviar(mess.only.premium)
+					if (args.length < 1) return enviar(mess.blank)
+					teks = body.slice(12)
+					reply('*Estou fazendo, se der erro tente novamente ✓*')
+					anu = await fetchJson(`https://mnazria.herokuapp.com/api/check?ip=${teks}`)
+				    hasil = ` *🔍CONSULTA REALIZADA🔍* \n\n ➸ *CIDADE:* sequestra ele não man😭😭😭\n ➸ *Latitude* : ${anu.latitude}\n ➸ *Longtitude* : ${anu.longitude}\n ➸ *REGIÃO* : ${anu.region_name}\n ➸ *UF* : ${anu.region_code}\n ➸ *IP* : ${anu.ip}\n ➸ *TIPO* : ${anu.type}\n ➸ *CEP* : ${anu.zip}\n ➸ *LOCALIDADE* : ${anu.location.geoname_id}\n ➸ *CAPITAL* : ${anu.location.capital}\n ➸ *DDD* : ${anu.location.calling_code}\n ➸ *PAÍS* : ${anu.location.country_flag_emoji}\n *📌BY:*PCW Bot*`
+					Pin.sendMessage(from, hasil, text, {quoted: mek, })
+					break		
 				case 'bot':
 			     	memein = await kagApi.memeindo()
 					buffer = await getBuffer(`https://i.imgur.com/dPUVFF6.png`)
