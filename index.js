@@ -502,11 +502,6 @@ if (text.includes("placa"))
 			reply("𓇽͢ 𝑷𝑹𝑰𝑴𝑬𝑰𝑹𝑶͢ 𝑪𝑶𝑴𝑨𝑵𝑫𝑶͢ 𝑫𝑨͢ 𝑾𝑬𝑩͢ ¹⁵⁷")
 	}
 	
-	if (messagesC.includes("*play")){
-			client.updatePresence(from, Presence.composing)
-			reply("⚠️*COMANDO REMOVIDO POR MUITO FLOOD*⚠️")
-	}
-	
 	if (messagesC.includes("obgd")){
 			client.updatePresence(from, Presence.composing)
 			reply("de nd broo")
@@ -790,6 +785,58 @@ break
 				      reply("Error")
 				   }
 				   break
+				case 'play':   
+					if (args.length < 1) return reply(`Exemplo : ${p}play Perdição`)	
+					apykeybysayo = 'Skillerofc'  //CONSIGA SUA KEY NESSE SITE = https://api.zeks.xyz/api
+					reply("espere") 				 
+				anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?apikey=${apykeybysayo}&q=${body.slice(5)}`)
+				if (anu.error) return reply(anu.error)
+				infomp3 = `𝐂𝐨𝐧𝐭𝐚 𝐕𝐞𝐫𝐢𝐟𝐢𝐜𝐚𝐝𝐚\n❗MUSÍCA ENCONTRADA\n[❗] enviando sua música aguarde..`				
+			    buffer = await getBuffer(`https://api-exteam.herokuapp.com/api/card-spotify?titulo=${encodeURIComponent(anu.result.title)}&author=${encodeURIComponent(anu.result.source)}&album=PCW-BOT&capa=${anu.result.thumbnail}`)
+				Pin.sendMessage(from, buffer, image, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": infomp3, 'jpegThumbnail': fs.readFileSync('kk/sticker/botlogo.webp')}}}})					
+                msc = await getBuffer(anu.result.url_audio)				
+				Pin.sendMessage(from, msc, audio, {mimetype: 'audio/mp4', filename: `private-bot.mp3`, quoted: mek })
+				break            
+				case 'roleta':
+const tiro = ["vazio","vazio","vazio","vazio","vazio","vazio","vazio","vazio","pow","pow"]
+const figr = ["pattta1","pattta2","pattta3"]
+tpa = tiro[Math.floor(Math.random() * (tiro.length))]	
+tpb = figr[Math.floor(Math.random() * (figr.length))]
+figb = fs.readFileSync('./src/'+tpb+'.webp')
+if (tpa == "vazio") {
+var morte = "Você teve sorte dessa vez, o tambor estava vazio."
+} else if (tpa == "pow") {
+var morte = "Tinha uma bala no tambor, POW!"
+}
+if (morte == "Tinha uma bala no tambor, POW!") {
+Pin.sendMessage(from, morte, text, {quoted: mek})
+}
+break				
+case 'plaquinha2':
+					if (args.length < 1) return enviar(mess.blank)
+					teks = body.slice(12)
+					if (teks.length > 25) return reply('O texto é longo, até 25 caracteres')
+					reply('*Estou fazendo, se der erro tente novamente ✓*')
+					buffer = await getBuffer(`https://ubbornag.sirv.com/Screenshot_20210513-151821.png?text.0.text=${teks}&text.0.position.x=-40%25&text.0.position.y=-65%25&text.0.size=30&text.0.color=000000&text.0.opacity=53&text.0.font.family=Shadows%20Into%20Light%20Two&text.0.outline.blur=15`)
+					Pin.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ta na mão 😈\n\n𝙳𝙾𝙽𝙾: ⁷ ᴘᴀɪᴢᴀ̃ᴏ⁰²⁷'})
+					break
+					case 'plaquinha3':
+					if (args.length < 1) return enviar(mess.blank)
+					teks = body.slice(11)
+					if (teks.length > 10) return reply('O texto é longo, até 10 caracteres')
+					reply('*Estou fazendo, se der erro tente novamente ✓*')
+					buffer = await getBuffer(`https://rsymenti.sirv.com/images%20(10).jpeg?text.0.text=${teks}&text.0.position.gravity=south&text.0.position.x=4%25&text.0.position.y=-32%25&text.0.align=left&text.0.size=34&text.0.color=000000&text.0.opacity=78&text.0.background.opacity=78&text.0.outline.blur=72&text.0.outline.opacity=74`)
+					Pin.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ta na mão 😈\n\n𝙳𝙾𝙽𝙾: ⁷ ᴘᴀɪᴢᴀ̃ᴏ⁰²⁷'})
+					break		
+					case 'plaquinha':
+					if (args.length < 1) return enviar(mess.blank)
+					teks = body.slice(10)
+					if (teks.length > 20) return reply('O texto é longo, no máximo 20 caracteres')
+					reply('*Estou fazendo, se der erro tente novamente ✓*')
+					buffer = await getBuffer(`https://lculitas.sirv.com/ETw3FRnXgAI3Up_.jpg?text.0.text=${teks}&text.0.position.gravity=center&text.0.align=left&text.0.size=46&text.0.color=221b1b&text.0.opacity=47&text.0.font.family=Architects%20Daughter&text.0.background.color=783852&text.0.background.opacity=5&text.0.outline.blur=58`)
+					Pin.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ta na mão 😈\n\n𝙳𝙾𝙽𝙾: ⁷ ᴘᴀɪᴢᴀ̃ᴏ⁰²⁷'})
+					break
+					
 				case 'bot':
 			     	memein = await kagApi.memeindo()
 					buffer = await getBuffer(`https://i.imgur.com/dPUVFF6.png`)
