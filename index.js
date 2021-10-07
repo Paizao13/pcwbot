@@ -4,7 +4,7 @@ const {
     Presence,
     Mimetype,
     GroupSettingChange
-} = require('@paizao/tmj')
+} = require
 const { color, bgcolor } = require('./lib/color')
 const { help } = require('./src/help')
 const { pcwinsta } = require('./src/pcwinsta')
