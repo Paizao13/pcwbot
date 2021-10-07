@@ -5,7 +5,6 @@ const {
     Mimetype,
     GroupSettingChange
 } = require
-const { color, bgcolor } = require('./lib/color')
 const { help } = require('./src/help')
 const { pcwinsta } = require('./src/pcwinsta')
 const { canal } = require('./src/canal')
